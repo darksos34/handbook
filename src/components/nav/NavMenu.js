@@ -14,10 +14,13 @@ const NavMenu = () => (
             <Link to="/contact">Contact</Link>
         </p>
         <p>
-            <Link to="/services">Service</Link>
+            <Link to="/service">Service</Link>
         </p>
         <p>
-            <Link to="/portfolio">Login</Link>
+            <Link to="/portfolio">portfolio</Link>
+        </p>
+        <p>
+            <Link to="/login">Login</Link>
         </p>
     </>
 )

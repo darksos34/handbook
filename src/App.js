@@ -4,7 +4,9 @@ import NavComponent from "./components/nav/NavComponent";
 import React from "react";
 import Router from "./components/nav/Router";
 
-export default function App() {
+
+const App = () => {
+
     return (
         <>
             <NavComponent/>
@@ -12,3 +14,4 @@ export default function App() {
         </>
     );
 }
+export default App;
