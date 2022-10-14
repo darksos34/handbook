@@ -1,6 +1,5 @@
 import axios from "axios";
 
-//Add header, import authHeader from "./auth-header";
 import httpCommon from './../../http-common';
 
 const API_URL = "httpCommon";
