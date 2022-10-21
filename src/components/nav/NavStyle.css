@@ -116,6 +116,7 @@
     }
     .nav-menu-wrapper {
         top: 20px;
+        height: auto;
     }
     .nav-menu-wrapper-button {
         display: block;
