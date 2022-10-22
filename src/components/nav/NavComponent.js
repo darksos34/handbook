@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './NavStyle.css';
 import Logo from '../../assets/logo.png';
 
@@ -10,6 +10,18 @@ import Login from "../pages/Login";
 
 const NavComponent = () =>  {
     const [toggleMenu, setToggleMenu] = useState(false);
+    const [theme, setTheme] = useState('light');
+    const toggleTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    };
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
+
     return (
         <div>
             <nav>
@@ -61,7 +73,7 @@ const NavComponent = () =>  {
                                     </div>
                                 )
                             }
-                        </div>
+                        </div><button onClick={toggleTheme}>Toggle Theme</button>
                     </div>
 
                 </div>
