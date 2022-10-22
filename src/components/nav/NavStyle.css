@@ -91,12 +91,16 @@
 .nav-menu-wrapper-button {
     display: none;
 }
+.pages
 
 @media screen and (max-width: 1050px) {
     .links-wrapper {
         display: none;
     }
     .nav-menu {
+        display: flex;
+    }
+    .pages {
         display: flex;
     }
 }

@@ -6,9 +6,11 @@ export default function Home (){
 
     return (
         <div className="container">
-            <nav>
-                <h1>Home</h1>
-            </nav>
+            <div className="header-title">
+                <nav>
+                    <h1>Home</h1>
+                </nav>
+            </div>
         </div>
     )
 }

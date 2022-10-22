@@ -8,71 +8,71 @@ import CheckButton from "react-validation/build/button";
 import AuthService from "../services/auth.service";
 
 
-    const required = (value) => {
-        if (!value) {
-            return (
-                <div className="invalid-feedback d-block">
-                    This field is required!
-                </div>
-            );
-        }
-    };
+const required = (value) => {
+    if (!value) {
+        return (
+            <div className="invalid-feedback d-block">
+                This field is required!
+            </div>
+        );
+    }
+};
 export default function Login (){
 
 
-        const form = useRef();
-        const checkBtn = useRef();
+    const form = useRef();
+    const checkBtn = useRef();
 
-        const [username, setUsername] = useState("");
-        const [password, setPassword] = useState("");
-        const [loading, setLoading] = useState(false);
-        const [message, setMessage] = useState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
 
-        const navigate = useNavigate();
+    const navigate = useNavigate();
 
-        const onChangeUsername = (e) => {
-            const username = e.target.value;
-            setUsername(username);
-        };
+    const onChangeUsername = (e) => {
+        const username = e.target.value;
+        setUsername(username);
+    };
 
-        const onChangePassword = (e) => {
-            const password = e.target.value;
-            setPassword(password);
-        };
+    const onChangePassword = (e) => {
+        const password = e.target.value;
+        setPassword(password);
+    };
 
-        const handleLogin = (e) => {
-            e.preventDefault();
+    const handleLogin = (e) => {
+        e.preventDefault();
 
-            setMessage("");
-            setLoading(true);
+        setMessage("");
+        setLoading(true);
 
-            form.current.validateAll();
+        form.current.validateAll();
 
-            if (checkBtn.current.context._errors.length === 0) {
-                AuthService.login(username, password).then(
-                    () => {
-                        navigate("/profile");
-                        window.location.reload();
-                    },
-                    (error) => {
-                        const resMessage =
-                            (error.response &&
-                                error.response.data &&
-                                error.response.data.message) ||
-                            error.message ||
-                            error.toString();
+        if (checkBtn.current.context._errors.length === 0) {
+            AuthService.login(username, password).then(
+                () => {
+                    navigate("/profile");
+                    window.location.reload();
+                },
+                (error) => {
+                    const resMessage =
+                        (error.response &&
+                            error.response.data &&
+                            error.response.data.message) ||
+                        error.message ||
+                        error.toString();
 
-                        setLoading(false);
-                        setMessage(resMessage);
-                    }
-                );
-            } else {
-                setLoading(false);
-            }
-        };
+                    setLoading(false);
+                    setMessage(resMessage);
+                }
+            );
+        } else {
+            setLoading(false);
+        }
+    };
 
-        return (
-            <div className="container">
+    return (
+        <div className="container">
             <div className="col-md-12">
                 <div className="card card-container">
                     <img
@@ -125,7 +125,7 @@ export default function Login (){
                         <CheckButton style={{ display: "none" }} ref={checkBtn} />
                     </Form>
                     <div>
-                       <p> Not registered?</p>
+                        <p> Not registered?</p>
                         <button type="button">
                             <p>
                                 <Link to="/register">Register</Link>
@@ -134,7 +134,7 @@ export default function Login (){
                     </div>
                 </div>
             </div>
-            </div>
-        );
-    };
+        </div>
+    );
+};
 

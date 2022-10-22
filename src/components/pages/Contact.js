@@ -5,9 +5,11 @@ export default function Contact (){
 
     return (
         <div className="container">
+            <div className="header-title">
             <nav>
                 <h1>Contact</h1>
             </nav>
+            </div>
         </div>
     )
 }
