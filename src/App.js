@@ -1,14 +1,18 @@
 import './App.css';
 import NavComponent from "./components/nav/NavComponent";
-
-import React from "react";
+import '././components/pages/darkMode.css'
+import React, {useState} from "react";
 
 const App = () => {
+    const [theme, setTheme] = useState('light');
 
     return (
         <>
-            <NavComponent/>
+            <div className={`App${theme}`}>
+                <NavComponent/>
+            </div>
         </>
+
     );
 }
 export default App;
