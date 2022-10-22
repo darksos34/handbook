@@ -1,4 +1,5 @@
 import React, { useRef, useState} from 'react';
+import './Pages.css';
 
 import {Link, useNavigate} from "react-router-dom";
 import Form from "react-validation/build/form";
@@ -71,6 +72,7 @@ export default function Login (){
         };
 
         return (
+            <div className="container">
             <div className="col-md-12">
                 <div className="card card-container">
                     <img
@@ -131,6 +133,7 @@ export default function Login (){
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
         );
     };

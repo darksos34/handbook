@@ -1,10 +1,11 @@
 import React from 'react';
+import './Pages.css';
 
 export default function Portfolio (){
 
 
     return (
-        <div>
+        <div className="container">
             <nav>
                 <h1>Portfolio</h1>
             </nav>
