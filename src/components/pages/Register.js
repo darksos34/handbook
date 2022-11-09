@@ -103,7 +103,7 @@ const Register = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container-login">
             <div className="col-md-12">
                 <div className="card card-container">
                     <img

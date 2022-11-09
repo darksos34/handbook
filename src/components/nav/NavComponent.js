@@ -7,6 +7,7 @@ import NavMenu from "./NavMenu";
 import Router from "./Router";
 import {Link} from "react-router-dom";
 import Login from "../pages/Login";
+import Footer from "../pages/Footer";
 
 const NavComponent = () =>  {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -29,7 +30,7 @@ const NavComponent = () =>  {
                     <div className="links">
                         <div className="links-logo">
                             <img src={Logo} alt="sss" srcSet=""></img>
-                        </div>
+                        </div><button onClick={toggleTheme}>Toggle Theme</button>
                         <div className="links-wrapper">
                             <NavMenu/>
                         </div>
@@ -73,7 +74,7 @@ const NavComponent = () =>  {
                                     </div>
                                 )
                             }
-                        </div><button onClick={toggleTheme}>Toggle Theme</button>
+                        </div>
                     </div>
 
                 </div>
@@ -81,6 +82,7 @@ const NavComponent = () =>  {
             <div>
                 <Router/>
             </div>
+            <Footer/>
             {/* <AuthVerify logOut={logOut}/> */}
         </div>
     );

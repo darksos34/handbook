@@ -4,7 +4,7 @@ import './Pages.css';
 export default function Contact (){
 
     return (
-        <div className="container">
+        <div className="container-login">
             <div className="header-title">
             <nav>
                 <h1>Contact</h1>

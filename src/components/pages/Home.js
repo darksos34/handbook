@@ -5,11 +5,13 @@ export default function Home (){
 
 
     return (
-        <div className="container">
-            <div className="header-title">
-                <nav>
-                    <h1>Home</h1>
-                </nav>
+        <div className="container-login">
+            <div className="card card-container">
+                <div className="header-title">
+                    <nav>
+                        <h1>Home</h1>
+                    </nav>
+                </div>
             </div>
         </div>
     )

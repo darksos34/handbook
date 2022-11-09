@@ -4,7 +4,7 @@ import '././components/pages/darkMode.css'
 import React, {useState} from "react";
 
 const App = () => {
-    const [theme, setTheme] = useState('light');
+    const [theme] = useState('light');
 
     return (
         <>
